@@ -1,0 +1,27 @@
+#import weather information for given city
+import requests
+
+api_key = "0a9284b3530c4051923733448bfffd15"
+
+base_url = "http://api.openweathermap.org/data/2.5/weather?"
+
+city_name = input("Please enter city name here: ")
+
+complete_url = base_url + "appid" + api_key + city_name
+
+response = requests.get(complete_url)
+
+x = reponse.json()
+if x["cod"] != "zip code":
+	y = x["main"]
+	current_temperature = y["temperature"]
+	print("The current temperature in {city_name} is: ")
+		str(current_temperature)
+else:
+	print("City not found. Please try again.")
+
+input("Would you like to try again? (yes or no)")
+if input == "yes" or input == 'y':
+	city_name = input("Please enter city name here: ")
+else:
+	break
