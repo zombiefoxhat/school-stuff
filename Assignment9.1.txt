@@ -1,0 +1,16 @@
+import os
+
+def get_file_directory():
+	str = input("Where would you like to save this file? ")
+
+def get_file_name():
+	str = input("What is the name of the file you would like to save? ")
+	filename = input
+
+def get_user_info():
+	input("Please enter your first and last name, address, and phone number (name, adress, phone number): ")
+	title = input
+
+filePath = filename
+with open(filePath, 'r+')
+print(data)
